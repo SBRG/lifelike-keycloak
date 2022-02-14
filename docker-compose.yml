@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  keycloak:
+    build: .
+    environment:
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+      KEYCLOAK_LOGLEVEL: INFO
+      ROOT_LOGLEVEL: INFO
+    volumes:
+      - ./themes/lifelike:/opt/jboss/keycloak/themes/lifelike
+      # Startup script to disable theme cache during development
+      - ./disable-theme-cache.cli:/opt/jboss/startup-scripts/disable-theme-cache.cli
+    ports:
+      - 8080:8080
