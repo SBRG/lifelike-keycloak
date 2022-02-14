@@ -9,8 +9,9 @@ services:
       KEYCLOAK_LOGLEVEL: INFO
       ROOT_LOGLEVEL: INFO
     volumes:
-      - ./themes/lifelike:/opt/jboss/keycloak/themes/lifelike
+      - ./original-themes:/opt/jboss/keycloak/themes:ro
+      - ./lifelike-theme:/opt/jboss/keycloak/themes/lifelike
       # Startup script to disable theme cache during development
-      - ./disable-theme-cache.cli:/opt/jboss/startup-scripts/disable-theme-cache.cli
+      - ./disable-cache.cli:/opt/jboss/startup-scripts/disable-cache.cli
     ports:
       - 8080:8080
