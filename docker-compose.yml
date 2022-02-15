@@ -6,12 +6,9 @@ services:
     environment:
       KEYCLOAK_USER: admin
       KEYCLOAK_PASSWORD: admin
-      KEYCLOAK_LOGLEVEL: INFO
-      ROOT_LOGLEVEL: INFO
+      KEYCLOAK_DEFAULT_THEME: lifelike
     volumes:
-      - ./original-themes:/opt/jboss/keycloak/themes:ro
-      - ./lifelike-theme:/opt/jboss/keycloak/themes/lifelike
-      # Startup script to disable theme cache during development
+      - ./theme:/opt/jboss/keycloak/themes/lifelike
       - ./disable-cache.cli:/opt/jboss/startup-scripts/disable-cache.cli
     ports:
       - 8080:8080
