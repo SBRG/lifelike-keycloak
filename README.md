@@ -1,22 +1,26 @@
 # Lifelike Keycloak
 
-This repository extends the official Keycloak Docker image with a few additional features
+This repository extends the official Keycloak Docker image, adding a custom Theme and configuration.
 
-Theme is copied from the `/lifelike-theme` directory in the Keycloak Docker image
-
-Development operations:
+## Development
 
 ```shell
-# Build and start container for development width Docker compose
-# Note: For convenience, a read-only bind mount is creator in the ./original-themes directory
+# Build and run the image with Cocker Compose
 make up
 
-# Tail container logs
+# Other targets
 make logs
-
-# Stop and remove container
 make down
-
-# down and up consecutively
 make reset
+```
+
+## Themes reference
+
+Lifelike custom Theme is copied from the `/theme` directory into the Keycloak image theme's directory. This Custom theme extends default Keycloak theme(s).
+
+To get reference original themes to the local `/original-themes` directory, run:
+
+```shell
+# Copy original themes to local directory
+make copy-original-themes
 ```
