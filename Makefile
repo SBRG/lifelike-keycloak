@@ -12,4 +12,4 @@ logs:
 	docker-compose logs -f
 
 copy-original-themes:
-	docker-compose cp keycloak:/opt/jboss/keycloak/themes ./original-themes
+	docker compose cp keycloak:/opt/jboss/keycloak/themes ./original-themes
