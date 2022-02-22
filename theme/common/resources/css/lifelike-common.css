@@ -1,3 +1,39 @@
+a {
+  color: #0c8caa;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.card-pf {
+  border-top: none;
+}
+
 .login-pf body {
-  background: lightblue;
+  background: #0c8caa;
+}
+
+.pf-c-button.pf-m-primary {
+  background-color: #0c8caa;
+}
+
+.pf-c-button {
+  background-color: #0c8caa;
+}
+
+.pf-c-form-control:hover {
+  border-bottom-color: #0c8caa;
+}
+.pf-c-form-control:focus {
+  outline-color: #0c8caa;
+  border-color: #0c8caa;
+}
+
+.pf-m-primary {
+  color: #ffffff;
+  background-color: #0c8caa;
+}
+.pf-m-primary:hover {
+  background-color: #075163;
 }
