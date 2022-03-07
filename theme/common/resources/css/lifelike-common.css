@@ -14,12 +14,18 @@ body {
   background: #0c8caa;
 }
 
+.kc-social-gray {
+  color: #ffffff;
+}
+
 .pf-c-button.pf-m-primary {
   background-color: #0c8caa;
+  color: #ffffff;
 }
 
 .pf-c-button {
   background-color: #0c8caa;
+  color: #ffffff;
 }
 
 .pf-c-form-control:hover {
