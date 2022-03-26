@@ -1,3 +1,3 @@
-FROM jboss/keycloak:16.1.1
+FROM jboss/keycloak:17.0.1
 
 COPY theme /opt/jboss/keycloak/themes/lifelike
